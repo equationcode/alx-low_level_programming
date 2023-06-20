@@ -1,4 +1,4 @@
 #!/bin/bash
 
-wget -O /tmp/cracking_output.so https://raw.github.com/equationcode/alx-low_level_programming/main/0x18-dynamic_libraries/cracking_output.so
-export LD_PRELOAD=/tmp/cracking_output.so
+wget -P /tmp https://github.com/equationcode/alx-low_level_programming/raw/main/0x18-dynamic_libraries/test.so
+export LD_PRELOAD=/tmp/test.so
