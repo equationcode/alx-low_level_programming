@@ -64,14 +64,14 @@ int binary_search_index1(int *array, size_t l, size_t r, int value)
 
 int exponential_search(int *array, size_t size, int value)
 {
-	size_t low = 2, high = 3;
+	size_t low = 1, high = 2;
 
 	if (!array || !size)
 		return (-1);
-	if (size < 3)
+	if (size < 2)
 	{
-		low = 2;
-		high = 3;
+		low = 0;
+		high = 1;
 	}
 	else
 	{
@@ -80,7 +80,7 @@ int exponential_search(int *array, size_t size, int value)
 			printf("Value checked array[%lu] = [%d]\n", low, array[low]);
 			if (
 				((array[low] <= value) && (array[high] >= value))
-				|| ((low * 3) >= size)
+				|| ((low * 2) >= size)
 				)
 				break;
 			low *= 2;
